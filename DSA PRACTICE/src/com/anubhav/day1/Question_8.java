@@ -13,7 +13,6 @@ public class Question_8 {
     
     	int[] ans = {-1,-1};
     	ans[0] = search( nums ,  target,  true);
-    	
     	if(ans[0]!=-1) {
     		ans[1] = search(nums, target, false);
     	}
