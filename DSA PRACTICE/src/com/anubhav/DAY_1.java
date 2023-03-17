@@ -18,24 +18,38 @@ public class DAY_1 {
     }
    static boolean even(int number){
     
-      int numberOfElement = countNumber(number);
+      int numberOfElement = countNumber2(number);
 //      System.out.println(number+" Number OF ELement:"+numberOfElement);
       return numberOfElement %2==0;
    }
-   static int countNumber(int num){
-	   int count=0;
-       if(num<0){
-           num = num * -1;
-       }
-       if(num==0){
-           return 1;
-       }
-       
-       while(num>0){
-//    	   System.out.println(count);
-           count++;
-           num = num / 10;
-       }
-       return count;
+   
+   //optimize way
+   static int countNumber2(int num) {
+	   if(num<0) {
+		   num=num*-1;
+	   }
+	   if(num==0) {
+		   return 1;
+	   }
+	   
+	   return (int)(Math.log10(num))+1;
    }
+   
+   
+//   static int countNumber(int num){
+//	   int count=0;
+//       if(num<0){
+//           num = num * -1;
+//       }
+//       if(num==0){
+//           return 1;
+//       }
+//       
+//       while(num>0){
+////    	   System.out.println(count);
+//           count++;
+//           num = num / 10;
+//       }
+//       return count;
+//   }
 }
