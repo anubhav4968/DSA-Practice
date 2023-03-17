@@ -4,7 +4,7 @@ public class Question_8 {
 
 	public static void main(String[] args) {
 		int[] arr = {5,7,7,8,8,10};
-		int target = 5;
+		int target = 13;
 		int[] ans = searchRange(arr, target);
 		System.out.println("["+ans[0]+","+ans[1]+"]");
 	}
@@ -12,10 +12,11 @@ public class Question_8 {
     	
     
     	int[] ans = {-1,-1};
-    	int first = search( nums ,  target,  true);
-    	int second = search(nums, target, false);
-    	ans[0] = first;
-    	ans[1]=second;
+    	ans[0] = search( nums ,  target,  true);
+    	
+    	if(ans[0]!=-1) {
+    		ans[1] = search(nums, target, false);
+    	}
     	return ans;
     	
     }
