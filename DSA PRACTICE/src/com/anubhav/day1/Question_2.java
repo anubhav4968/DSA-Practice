@@ -11,24 +11,26 @@ public class Question_2 {
 		System.out.println(maximumWealth(arr));
 	}
     public static int maximumWealth(int[][] accounts) {
-        int[] arr = new int[accounts.length];
+        int max = Integer.MIN_VALUE;
         
         for(int row=0;row<accounts.length;row++) {
         	int total = sum(accounts[row]);
-        	arr[row]=total;
+        	if(max<total) {
+        		max = total;
+        	}
         }
-        return max(arr);
+        return max;
     }
     
-    static int max  (int[] arr) {
-    	int greater = Integer.MIN_VALUE;
-    	for(int i=0;i<arr.length;i++) {
-    		if(arr[i]>greater) {
-    			greater=arr[i];
-    		}
-    	}
-    	return greater;
-    }
+//    static int max  (int[] arr) {
+//    	int greater = Integer.MIN_VALUE;
+//    	for(int i=0;i<arr.length;i++) {
+//    		if(arr[i]>greater) {
+//    			greater=arr[i];
+//    		}
+//    	}
+//    	return greater;
+//    }
     
     static int sum(int[] arr) {
     	int sum =0;
