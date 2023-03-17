@@ -14,7 +14,7 @@ public class Question_3 {
 		while(start <= end) {
 			//Get the middle element
 			int mid = start + (end - start)/2;
-//			System.out.println("Start: "+start+" End: "+end+" Mid: "+ mid+" Element: "+arr[mid]+" Target: "+target);
+//			System.out.println("Start: "+start+" End: "+end+" Mid: "+ mid+" Element in the middle: "+arr[mid]+" Target: "+target);
 			if(target < arr[mid]) {
 				end = mid -1 ;
 			}
