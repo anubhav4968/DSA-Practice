@@ -3,7 +3,7 @@ package com.anubhav.day3;
 public class Question_1 {
 
 	public static void main(String[] args) {
-		int[] arr= {3,5,1};
+		int[] arr= {4,5,6,7,0,1,2};
 		int target =3;
 		System.out.println(findPivot(arr));
 		System.out.println(search(arr, target));
